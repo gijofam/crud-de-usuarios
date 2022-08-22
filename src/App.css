@@ -1,0 +1,227 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+h1,h2,h3,h4,ul{
+    margin: 0;
+}
+/* ***********estilos del componente padre******* */
+/* body{
+    background-color: red;
+    padding: 0;
+} */
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;   
+    flex-wrap: wrap;
+    padding-bottom: 0;
+    /* background-color: red; */
+}
+
+.app_hr{
+ /* padding: 1em; */
+ width: 85%;
+ margin-top: 0;
+ margin-bottom: 1em;
+ /* font-weight: 200; */
+}
+.header__title{
+    color: #0563c8;
+}
+
+.header__btn{
+    border: 1px solid #0563c8 ;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(5, 99, 200);
+}
+
+.header__btn:hover{
+    color: #0563c8;
+    background-color: white;
+    cursor: pointer;
+}
+
+.form-container--none{
+    display: none;
+}
+.form-container{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ backdrop-filter: blur(5px);
+ z-index: 10;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    z-index: 5;
+}
+
+/* ************estilos del formulario********** */
+input{
+    outline:none;
+}
+
+input:hover{
+    border: 0.5px solid #0563c8;
+}
+
+.card-form{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+ gap: 0.5em;
+ border: 1px solid gray;
+ border-radius: 10px;
+ padding: 2em 1.5em;
+ background-color: rgb(255,255,255);
+ position: relative;
+}
+.card-form__close{
+    position: absolute;
+    right: 0;
+    top: 0;;
+    /* background-color: red; */
+    padding: 0.5em 1em;
+    text-shadow: 0 1px 2px #0563c8;
+}
+.card-form__close:hover{
+ cursor: pointer;
+}
+
+.card-form__btn{
+ align-self:center ;
+ font-size: 1em;
+ background-color: #0563c8;
+ color: white;
+ border: 1px solid #0563c8;
+ border-radius: 5px;
+}
+
+.card-form__btn:hover{
+    color: #0563c8;
+    background-color: white;
+    cursor: pointer;
+}
+/* ***********estilos del car usuarios ************ */
+.card{
+ /* border: 1px solid black; */
+ border-radius: 10px;
+ width: 250px;
+ padding: 1em;
+ box-shadow: 2px 4px 10px ;
+ 
+ /* text-align: ; */
+}
+.card:hover{
+    /* transform: translateY(-10px); */
+    transform: scale(1.05,1.05);
+    transition: transform 400ms ease;
+}
+.card__title{
+    text-align: center;
+    /* text-decoration:underline; */
+}
+.card__list{
+ list-style: none;
+ padding-left: 0;
+ margin-bottom: 0.5em;
+}
+.card__item{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 0.5em;
+}
+.card__item span{
+    color: gray;
+}
+
+.card__footer{
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ gap: 0.5em;
+}
+.card__footer--delete{
+ background-color: rgb(255,0,0,0.5);
+ border: none;
+ border-radius: 2px;
+ font-size: 1.5em;
+}
+.card__footer--update{
+ background-color: rgb(0,255,0,0.3);
+ border: none;
+ border-radius: 2px;
+ font-size: 1.7em;
+}
+
+@media screen and (max-width: 450px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        align-items: center;
+
+        /* width: 90%;    */
+        /* flex-wrap: wrap; */
+    }
+
+    .header__title{
+    }
+    
+    .header__btn{
+        font-size: 1em;
+        margin-top: 0.3em;
+        padding: 10px 3px;
+        /* border: 1px solid #0563c8 ;
+        border-radius: 5px;
+        color: white;
+        background-color: rgb(5, 99, 200); */
+    }
+    
+    .header__btn:hover{
+        color: #0563c8;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .card-form__btn{
+        align-self:center ;
+        font-size: 1em;
+        background-color: #0563c8;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 8px;
+        margin-top: 5px;
+    }
+    
+    
+}
+
